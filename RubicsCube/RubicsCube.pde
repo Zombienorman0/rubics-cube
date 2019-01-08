@@ -1,3 +1,11 @@
+color red = #F52A2A;
+color blue = #1737E3;
+color yellow = #F7FF21;
+color orange = #EA6A1A;
+color white = #FCFFFD;
+color green = #0FA727;
+
+
 void setup()  {
   size(640, 360, P3D);
   noStroke();
@@ -18,5 +26,7 @@ void draw()  {
   translate(width/2, height/2, 0);
   rotateX(-PI/6); 
   rotateY(PI/3); 
-  box(160); 
+  box(160);
+  
+
 }
