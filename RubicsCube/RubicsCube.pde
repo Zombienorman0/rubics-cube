@@ -17,4 +17,5 @@ void draw() {
   stroke(255);
   noFill();
   box(200);
+  box(85);
 }
