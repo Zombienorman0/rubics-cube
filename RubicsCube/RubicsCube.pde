@@ -1,21 +1,43 @@
-color red = #F52A2A;
-color blue = #1737E3;
-color yellow = #F7FF21;
-color orange = #EA6A1A;
-color white = #FCFFFD;
-color green = #0FA727;
+//kill me
+//OOFs
+float rotation=0;
 
+color red = #FF2424;
+color green = #4CFF17;
+color yellow = #FFF817;
+color blue = #21CDFF;
+color white =#FFFFFF;
+color orange = #FF7A21;
+color purple = #C433B6;
+
+color black = #000000;
+int rubiksCube = 300;
+boolean startGame = false;
 
 void setup() {
   size(640, 360, P3D);
 }
 
 void draw() {
-  background(0);
-  camera(mouseX, height/2, (height/2) / tan(PI/6), width/2, height/2, 0, 0, 1, 0);
-  translate(width/2, height/2, -100);
-  stroke(255);
-  noFill();
-  box(200);
-  box(85);
+  loop();
+  background(purple);
+  bulitDraw();
+  buildDraw();
+  rando();
+
+  float orbitRadius= mouseX/2+50;
+  float ypos= mouseY/3;
+  float xpos= cos(radians(rotation))*orbitRadius;
+  float zpos= sin(radians(rotation))*orbitRadius;
+
+  camera(xpos, ypos, zpos, 0, 0, 0, 0, -1, 0);
+
+  rotation++;
+
+
+  //println ("mousex:", mouseX, "\tmouseY:", mouseY);
+}
+void keyPressed() {
+  resetButtonPressed();
+  rando();
 }
