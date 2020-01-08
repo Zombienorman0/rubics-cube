@@ -19,11 +19,9 @@ void setup() {
 }
 
 void draw() {
-  loop();
   background(purple);
   bulitDraw();
   buildDraw();
-  rando();
 
   float orbitRadius= mouseX/2+50;
   float ypos= mouseY/3;
